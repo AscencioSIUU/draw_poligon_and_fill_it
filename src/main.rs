@@ -119,10 +119,10 @@ fn main() {
                 Vector2::new(tri[0].x, tri[0].y),
                 Vector2::new(tri[1].x, tri[1].y),
                 Vector2::new(tri[2].x, tri[2].y),
-                Color::BLUE,
+                Color::YELLOW,
             );
         }
-        draw_polygon_outline(&mut new_image, &polygone1, Color::BLACK, image_height);
+        draw_polygon_outline(&mut new_image, &polygone1, Color::WHITE, image_height);
     }
 
     // polígono 2
@@ -136,10 +136,10 @@ fn main() {
                 Vector2::new(tri[0].x, tri[0].y),
                 Vector2::new(tri[1].x, tri[1].y),
                 Vector2::new(tri[2].x, tri[2].y),
-                Color::YELLOW,
+                Color::BLUE,
             );
         }
-        draw_polygon_outline(&mut new_image, &polygone2, Color::BLACK, image_height);
+        draw_polygon_outline(&mut new_image, &polygone2, Color::WHITE, image_height);
     }
 
     // polígono 3
@@ -153,10 +153,10 @@ fn main() {
                 Vector2::new(tri[0].x, tri[0].y),
                 Vector2::new(tri[1].x, tri[1].y),
                 Vector2::new(tri[2].x, tri[2].y),
-                Color::ORANGE,
+                Color::RED,
             );
         }
-        draw_polygon_outline(&mut new_image, &polygone3, Color::BLACK, image_height);
+        draw_polygon_outline(&mut new_image, &polygone3, Color::WHITE, image_height);
     }
 
     // polígono 4
@@ -173,10 +173,10 @@ fn main() {
                 Color::GREEN,
             );
         }
-        draw_polygon_outline(&mut new_image, &polygone4, Color::BLACK, image_height);
+        draw_polygon_outline(&mut new_image, &polygone4, Color::WHITE, image_height);
     }
 
-    // polígono 5 (agujero): pintarlo blanco
+    // polígono 5
     {
         let verts: Vec<Vertex> = polygone5.iter()
             .map(|&(x,y)| Vertex::new(x,y,image_height))
@@ -187,10 +187,10 @@ fn main() {
                 Vector2::new(tri[0].x, tri[0].y),
                 Vector2::new(tri[1].x, tri[1].y),
                 Vector2::new(tri[2].x, tri[2].y),
-                Color::WHITE,  // rellena el agujero
+                Color::WHITE,  
             );
         }
-        draw_polygon_outline(&mut new_image, &polygone5, Color::BLACK, image_height);
+        draw_polygon_outline(&mut new_image, &polygone5, Color::WHITE, image_height);
     }
 
     // exportar
